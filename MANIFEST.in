@@ -1,0 +1,2 @@
+recursive-include tw2/lesscss/templates *
+recursive-include tw2/lesscss/static *
