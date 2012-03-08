@@ -1,1 +1,1 @@
-from widgets import *
+from base import less_js
