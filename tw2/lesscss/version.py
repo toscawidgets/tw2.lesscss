@@ -1,3 +1,1 @@
-
-            version_num = '1.2.2'
-        
+version_num = '1.2.2'        
