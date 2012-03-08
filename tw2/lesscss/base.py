@@ -2,8 +2,8 @@ import tw2.core as twc
 import pkg_resources
 
 try:
-    import tw2.lesscss.version as ver
-    ver_num = ver.version_num
+    import version as ver
+    ver_num = ver._version_num_
     _variant_ = 'min' # Always min
 except ImportError:
     # Version information not found, 
