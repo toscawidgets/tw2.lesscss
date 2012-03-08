@@ -26,7 +26,7 @@ class SetupBuildCommand(Command):
         """
         pass
 
-class UpdateLessCSSCommand(Command):
+class UpdateLessCSSCommand(SetupBuildCommand):
     '''
     Updates the Less CSS Runtime library
     '''
@@ -48,24 +48,26 @@ class UpdateLessCSSCommand(Command):
         dl_link = link_obj['href']
         file_name = basename(dl_link)
         r = re.compile('less-([\d.]+)')
-        ver_num = r.match(fil).groups()[0][:-1]
+        ver_num = r.match(file_name).groups()[0][:-1]
 
         # Check to see if the directory already exists, if not make it
-        if not os.exists('tw2/lesscss/static/%s' % ver_num):
+        if not os.path.exists('tw2/lesscss/static/%s' % ver_num):
             os.mkdir('tw2/lesscss/static/%s' % ver_num)
 
         # Download LessCSS
         less_js = urllib2.urlopen(dl_link)
         with open('tw2/lesscss/static/%s/%s'%(ver_num, file_name), 'w') as js:
+            print "Downloading %s to static/%s" % (file_name, ver_num)
             js.write(less_js.read())
        
         # Update version.py
         vs_file = """
             version_num = '{ver_num}'
             file_name = '{file_name}'
-        """.format(dict(ver_num=ver_num, file_name=file_name))
+        """.format(ver_num=ver_num, file_name=file_name)
         
         with open('tw2/lesscss/version.py', 'w') as vs_py:
+            print "Writing new version.py"
             vs_py.write(vs_file)
 
         # Done!

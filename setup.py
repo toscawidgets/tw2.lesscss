@@ -43,6 +43,6 @@ setup(
         'Programming Language :: Python',
     ],
     cmdclass = {
-        'update-lesscss' : UpdateLessCSSCommand,
+        'updatelesscss' : UpdateLessCSSCommand,
     }
 )
