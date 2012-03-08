@@ -2,6 +2,7 @@ from setuptools import setup, find_packages
 
 import logging
 import multiprocessing
+from setup_ext import UpdateLessCSSCommand
 
 setup(
     name='tw2.lesscss',
@@ -41,4 +42,7 @@ setup(
         'Operating System :: OS Independent',
         'Programming Language :: Python',
     ],
+    cmdclass = {
+        'updatelesscss' : UpdateLessCSSCommand,
+    }
 )
