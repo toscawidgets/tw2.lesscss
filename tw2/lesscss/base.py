@@ -112,6 +112,7 @@ class LessCSSMixin(JSLinkMixin):
     url_base = 'http://lesscss.googlecode.com/files/'
 
 class LessCSSJSLink(twc.JSLink, LessCSSMixin):
+    location = 'headbottom' # Needs to be loaded in head last always
     pass
 
 less_js = LessCSSJSLink()
