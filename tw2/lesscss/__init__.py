@@ -1,1 +1,1 @@
-from base import Less
+from base import less_js

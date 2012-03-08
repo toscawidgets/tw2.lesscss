@@ -1,5 +1,4 @@
 import tw2.core as twc
-from tw2.core import core
 import pkg_resources
 
 try:
@@ -32,7 +31,7 @@ class JSLinkMixin(twc.Link):
 
     def __init__(self, *args, **kw):
         self._link = None
-        super(Link, self).__init__(*args, **kw)
+        super(twc.Link, self).__init__(*args, **kw)
 
     def prepare(self):
         if not self.is_external:
@@ -56,7 +55,7 @@ class JSLinkMixin(twc.Link):
         return link
 
     def _get_link(self):
-        rl = core.request_local()
+        rl = twc.core.request_local()
         mw = rl['middleware']
 
         if not self._link:
