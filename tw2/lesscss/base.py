@@ -1,5 +1,6 @@
 import tw2.core as twc
 import pkg_resources
+import os
 
 try:
     import version as ver
@@ -36,7 +37,7 @@ class JSLinkMixin(twc.Link):
     def prepare(self):
         if not self.is_external:
             modname = self.modname or self.__module__
-            rl = core.request_local()
+            rl = twc.core.request_local()
             resources = rl['middleware'].resources
             resources.register(self.modname, os.path.dirname(self.filename), whole_dir=True)
         super(JSLinkMixin, self).prepare()
