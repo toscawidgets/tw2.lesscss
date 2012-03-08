@@ -6,7 +6,7 @@ from setup_ext import UpdateLessCSSCommand
 
 setup(
     name='tw2.lesscss',
-    version='2.0.1b',
+    version='2.0.1c',
     description='Less CSS support for ToscaWidgets 2',
     author='Greg Jurman',
     author_email='gdj2214@rit.edu',
