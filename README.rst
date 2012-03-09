@@ -13,12 +13,11 @@ Lets use LessCSS to define a simple box with rounded corners and a drop-shadow.
 Create a file in the public folder TG2 project called 'simple.less'.
 
     .rounded-corners (@radius: 5px) {
-      border-radius: @radius;
-      padding: @radius;
-      -webkit-border-radius: @radius;
-      -moz-border-radius: @radius;
+        border-radius: @radius;
+        padding: @radius;
+        -webkit-border-radius: @radius;
+        -moz-border-radius: @radius;
     }
-
     .round-corners {
         .rounded-corners;
     }
