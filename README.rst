@@ -43,4 +43,4 @@ Now you can use the lesscss class in your templates!
 ::
     <div class="shaded-rounded-corners">Hello!</div>
 
-.. image:: http://github.com/toscawidgets/tw2.lesscss/raw/master/img/hello-div.png
+.. image:: http://github.com/toscawidgets/tw2.lesscss/raw/master/docs/img/hello-div.png
